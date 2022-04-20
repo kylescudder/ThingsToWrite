@@ -40,6 +40,5 @@
 		"@lukeed/uuid": "^2.0.0",
 		"cookie": "^0.4.2",
 		"env-cmd": "^10.1.0",
-		"flowbite": "^1.4.2"
 	}
 }

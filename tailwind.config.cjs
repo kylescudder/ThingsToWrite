@@ -6,6 +6,6 @@ module.exports = {
 			3: '3px'
 		}
 	},
-	plugins: [require('flowbite/plugin')],
+	plugins: [],
 	darkMode: 'class'
 };
