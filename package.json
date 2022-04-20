@@ -2,7 +2,7 @@
 	"name": "thingstowrite",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "env-cmd svelte-kit dev",
+		"dev": "svelte-kit dev",
 		"build": "svelte-kit build",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
@@ -39,6 +39,5 @@
 		"@fontsource/fira-mono": "^4.5.0",
 		"@lukeed/uuid": "^2.0.0",
 		"cookie": "^0.4.2",
-		"env-cmd": "^10.1.0",
 	}
 }
