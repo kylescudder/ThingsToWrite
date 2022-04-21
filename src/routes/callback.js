@@ -2,12 +2,11 @@ const clientId = import.meta.env.VITE_CLIENT_ID;
 const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
 
 export async function get(request) {
-	//const code = request.get('code');
 	const code = request.url.searchParams.get('code')
 
 	const token = await getToken(code)
 	const user = await getUser(token)
-	request.locals.user = user.login
+	request.locals.userName = user.name
 	request.locals.userId = user.id
 	return {
 		status: 302,

@@ -1,5 +1,5 @@
 export async function get(request) {
-	request.locals.user = { user: null }
+	request.locals.userName = { userName: null };
 	request.locals.userId = { userId: null }
 
 	return {

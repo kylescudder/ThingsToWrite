@@ -2,7 +2,7 @@
 	export async function load({session}) {
 		return {
 			props: {
-				user: session.user,
+				userName: session.userName,
 				userId: session.userId,
 			}
 		}
@@ -14,7 +14,7 @@ import { onMount } from 'svelte';
 	export const prerender = true;
 	import Workspace from './workspace.svelte'
 	let markdownLogo = './src/images/markdownLogo.png'
-	export let user
+	export let userName
 	export let userId
 
 	onMount(() => {
@@ -60,7 +60,6 @@ import { onMount } from 'svelte';
 <svelte:head>
 	<title>Home</title>
 </svelte:head>
-{#if !user}
 {#if !userId}
 <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-md w-full space-y-8 p-8 bg-gray-300 rounded-lg">
@@ -88,5 +87,5 @@ import { onMount } from 'svelte';
   </div>
 </div>
 {:else}
-	<Workspace user={user}/>
+	<Workspace userName={userName}/>
 {/if}
