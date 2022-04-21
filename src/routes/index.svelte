@@ -12,7 +12,7 @@
 import { onMount } from 'svelte';
 
 	export const prerender = true;
-	import Workspace from './workspace.svelte'
+	import Workspace from '../components/workspace.svelte'
 	let markdownLogo = './src/images/markdownLogo.png'
 	export let userName: string
 	export let userId: number
