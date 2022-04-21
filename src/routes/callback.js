@@ -8,11 +8,15 @@ export async function get(request) {
 	const token = await getToken(code)
 	const user = await getUser(token)
 	request.locals.user = user.login
+	request.locals.userId = user.id
 	return {
 		status: 302,
 		headers: {
 			location: '/',
-			'set-cookie': [`user=${user.login || ''}; Path=/; HttpOnly`]
+			'set-cookie': [
+				`userName=${user.name || ''}; Path=/; HttpOnly`,
+				`userId=${user.id || ''}; Path=/; HttpOnly`
+			]
 		}
 	};
 }

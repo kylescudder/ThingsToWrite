@@ -3,6 +3,7 @@
 		return {
 			props: {
 				user: session.user,
+				userId: session.userId,
 			}
 		}
 	}
@@ -14,6 +15,7 @@ import { onMount } from 'svelte';
 	import Workspace from './workspace.svelte'
 	let markdownLogo = './src/images/markdownLogo.png'
 	export let user
+	export let userId
 
 	onMount(() => {
 		var themeToggleBtn = document.querySelector('.toggle--label') as HTMLLabelElement;
@@ -59,6 +61,7 @@ import { onMount } from 'svelte';
 	<title>Home</title>
 </svelte:head>
 {#if !user}
+{#if !userId}
 <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-md w-full space-y-8 p-8 bg-gray-300 rounded-lg">
     <div>
